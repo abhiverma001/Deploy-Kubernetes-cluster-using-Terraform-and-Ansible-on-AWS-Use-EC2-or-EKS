@@ -21,15 +21,13 @@ pipeline{
                 environment name:'TERRADESTROY',value:'N'
                 environment name:'SKIP',value:'N'
             }
-            steps {
-                    script {
-                        sh '''
-                        aws --version
-                        aws s3 mb s3://${env.STATE_BUCKET}/inv inv                        
-                        '''
-                    }
-              }
-        }
+            steps{
+                sh '''
+                aws --version
+                aws s3 mb s3://${env.STATE_BUCKET}/inv inv                        
+                '''
+            }
+    }
 
         stage("Deploy Ansible Infra"){
             when{
