@@ -24,10 +24,10 @@ pipeline{
             steps{
                 sh '''
                 aws --version
-                aws s3 mb s3://${env.STATE_BUCKET}/inv inv                        
+                aws s3 mb s3://${env.STATE_BUCKET}                      
                 '''
             }
-    }
+       }
 
         stage("Deploy Ansible Infra"){
             when{
