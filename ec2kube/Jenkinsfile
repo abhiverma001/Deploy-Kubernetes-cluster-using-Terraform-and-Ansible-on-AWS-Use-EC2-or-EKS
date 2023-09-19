@@ -8,8 +8,8 @@ pipeline{
         SKIP="N"
         TERRADESTROY="N"
         FIRST_DEPLOY="Y"
-        STATE_BUCKET="<bucket_name>"
-        ANSIBLE_BUCKET_NAME="<ansible_bucket>"
+        STATE_BUCKET="state-bucket-19092013-abhi"
+        ANSIBLE_BUCKET_NAME="ansible-bucket-19092023-abhi"
     }
 
 
