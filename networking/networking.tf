@@ -6,8 +6,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "<bucket_name>"
-    key    = "<state_key>"
+    bucket = "k8s-ec2kube-terraform-state-file-20092023"
     region = "us-east-1"
   }
 }
