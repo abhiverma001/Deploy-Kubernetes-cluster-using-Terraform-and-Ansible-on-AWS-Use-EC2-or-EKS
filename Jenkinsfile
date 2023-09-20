@@ -8,22 +8,22 @@ pipeline{
         SKIP="N"
         TERRADESTROY="N"
         FIRST_DEPLOY="Y"
-        STATE_BUCKET="<bucket_name>"
-        ANSIBLE_BUCKET_NAME="<ansible_bucket>"
+        STATE_BUCKET="k8s-ec2kube-terraform-state-file-19092023"
+        ANSIBLE_BUCKET_NAME="k8s-ec2kube-ansible-playbook-19092023"
     }
 
 
 
     stages{
-        stage("Create Terraform State Buckets"){
+        stage('Create Terraform State Buckets'){
             when{
                 environment name:'FIRST_DEPLOY',value:'Y'
                 environment name:'TERRADESTROY',value:'N'
                 environment name:'SKIP',value:'N'
             }
-            steps{
-                sh'''
-                aws s3 mb s3://<bucket_name>'''
+            steps {
+                sh "aws s3 mb s3://${STATE_BUCKET}"
+                echo "Bucket '${STATE_BUCKET}' created successfully."
                 
             }
         }
