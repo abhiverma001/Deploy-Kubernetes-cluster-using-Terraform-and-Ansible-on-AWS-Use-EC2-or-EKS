@@ -1,3 +1,3 @@
 variable "ansible_bucket"{
-    default="<bucket_name>"
+    default="kubernetes-ec2kube-trf-state-file-bucket"
 }
