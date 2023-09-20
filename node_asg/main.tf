@@ -7,6 +7,7 @@ terraform {
 
   backend "s3" {
     bucket = "kubernetes-ec2kube-trf-state-file-bucket"
+    key    = "terraform.tfstate"
     region = "us-east-1"
   }
 }
