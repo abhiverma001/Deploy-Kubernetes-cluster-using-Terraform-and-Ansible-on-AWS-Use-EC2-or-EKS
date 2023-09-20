@@ -5,7 +5,7 @@ pipeline{
         AWS_ACCESS_KEY_ID=credentials('awsaccesskey')
         AWS_SECRET_ACCESS_KEY=credentials('awssecretkey')
         AWS_DEFAULT_REGION="us-east-1"
-        SKIP="Y"
+        SKIP="N"
         TERRADESTROY="N"
         FIRST_DEPLOY="Y"
         STATE_BUCKET="kubernetes-ec2kube-trf-state-file-bucket"
