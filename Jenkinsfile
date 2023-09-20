@@ -8,8 +8,8 @@ pipeline{
         SKIP="N"
         TERRADESTROY="N"
         FIRST_DEPLOY="Y"
-        STATE_BUCKET="k8s-ec2kube-terraform-state-file-20092023"
-        ANSIBLE_BUCKET_NAME="k8s-ec2kube-ansible-playbook-20092023"
+        STATE_BUCKET="<bucket_name>"
+        ANSIBLE_BUCKET_NAME="<bucket_name>"
     }
 
 
