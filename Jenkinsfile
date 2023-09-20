@@ -8,7 +8,7 @@ pipeline{
         SKIP="N"
         TERRADESTROY="N"
         FIRST_DEPLOY="Y"
-        STATE_BUCKET="kubernetes-ec2kube-terraform-state-file-bucket"
+        STATE_BUCKET="kubernetes-ec2kube-trf-state-file-bucket"
         ANSIBLE_BUCKET_NAME="kubernetes-ec2kube-ansible-bucket"
     }
 
